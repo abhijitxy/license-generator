@@ -1,8 +1,0 @@
-Package: license-generator
-Version: 0.1.0-1
-Section: base
-Priority: optional
-Architecture: amd64
-Maintainer: Your Name <your.email@example.com>
-Description: A CLI tool to generate licenses
- A command-line tool for generating license files.
