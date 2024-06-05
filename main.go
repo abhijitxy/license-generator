@@ -1,6 +1,6 @@
 package main
 
-import "license-generator/cmd"
+import "license-gen/cmd"
 
 func main() {
     cmd.Execute()

@@ -1,4 +1,4 @@
-module license-generator
+module license-gen
 
 go 1.22.3
 

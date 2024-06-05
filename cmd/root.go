@@ -7,7 +7,7 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-    Use:   "license-generator",
+    Use:   "license-gen",
     Short: "A CLI tool to generate licenses",
 }
 
