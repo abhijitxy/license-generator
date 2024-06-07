@@ -7,25 +7,47 @@ import (
     "github.com/spf13/cobra"
 )
 
-var year string
-var name string
-
 var rootCmd = &cobra.Command{
     Use:   "license-gen",
     Short: "A CLI tool to generate licenses",
     Run: func(cmd *cobra.Command, args []string) {
+        var year string
+        var name string
+
         // Define available templates
         templates := []string{"MIT", "Apache"}
 
         // Prompt user to select a template
         var selectedTemplate string
-        prompt := &survey.Select{
+        templatePrompt := &survey.Select{
             Message: "Choose a template:",
             Options: templates,
         }
-        err := survey.AskOne(prompt, &selectedTemplate)
+        err := survey.AskOne(templatePrompt, &selectedTemplate)
         if err != nil {
             fmt.Println("Error selecting template:", err)
+            return
+        }
+
+        // Prompt user for the year
+        yearPrompt := &survey.Input{
+            Message: "Enter the year:",
+            Default: "2024",
+        }
+        err = survey.AskOne(yearPrompt, &year)
+        if err != nil {
+            fmt.Println("Error entering year:", err)
+            return
+        }
+
+        // Prompt user for the name
+        namePrompt := &survey.Input{
+            Message: "Enter your name:",
+            Default: "Your Name",
+        }
+        err = survey.AskOne(namePrompt, &name)
+        if err != nil {
+            fmt.Println("Error entering name:", err)
             return
         }
 
@@ -41,6 +63,5 @@ func Execute() error {
 }
 
 func init() {
-    rootCmd.Flags().StringVarP(&year, "year", "y", "2024", "Year for the license")
-    rootCmd.Flags().StringVarP(&name, "name", "n", "Your Name", "Name for the license")
+    // No longer setting default values for year and name
 }

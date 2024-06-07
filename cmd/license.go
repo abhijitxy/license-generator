@@ -11,10 +11,8 @@ func generateLicense(template, year, name string) error {
     switch template {
     case "MIT":
         licenseText = fmt.Sprintf(mitTemplate, year, name)
-
     case "Apache":
         licenseText = fmt.Sprintf(apacheTemplate, year, name)
-
     default:
         return fmt.Errorf("unknown template: %s", template)
     }
