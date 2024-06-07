@@ -1,0 +1,35 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the build process
+/bin/
+/build/
+
+# Output of the coverage tool
+*.out
+
+# Directories for Go modules
+/vendor/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Dependency directories (remove the comment below if you're using Go modules)
+/vendor/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage.out
