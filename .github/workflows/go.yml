@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  
+    timeout-minutes: 30
 
     steps:
       - name: Checkout code
@@ -29,10 +29,10 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: 'License Generator Release ${{ github.ref }}'
-          body: |
-            Initial release of license-generator for Linux.
+          body: Initial release of license-generator for Linux.
           draft: false
           prerelease: false
+          token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
@@ -41,8 +41,8 @@ jobs:
           asset_path: ./license-generator-linux
           asset_name: license-generator-linux
           asset_content_type: application/octet-stream
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ secrets.RELEASE_TOKEN }}
+
 
 
 
