@@ -1,4 +1,4 @@
-name: Release
+name: LICENSE-GENERATOR
 
 on:
   push:
@@ -26,8 +26,6 @@ jobs:
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: 'License Generator Release ${{ github.ref }}'
@@ -43,5 +41,8 @@ jobs:
           asset_path: ./license-generator-linux
           asset_name: license-generator-linux
           asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
