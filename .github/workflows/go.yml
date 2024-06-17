@@ -1,4 +1,4 @@
-name: Release
+name: LICENSE-GENERATOR
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.22.3' 
+          go-version: '1.22.3'  
 
       - name: Build the binary
         run: |
@@ -36,7 +36,6 @@ jobs:
             Initial release of license-generator for ${{ matrix.os }}.
           draft: false
           prerelease: false
-          token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
@@ -46,4 +45,3 @@ jobs:
           asset_name: license-generator-${{ matrix.os }}
           asset_content_type: application/octet-stream
           token: ${{ secrets.RELEASE_TOKEN }}
-
