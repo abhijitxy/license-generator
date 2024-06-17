@@ -1,4 +1,4 @@
-name: LICENSE-GENERATOR
+name: Release
 
 on:
   push:
@@ -43,5 +43,5 @@ jobs:
           asset_path: ./license-generator-linux
           asset_name: license-generator-linux
           asset_content_type: application/octet-stream
-          token: ${{ secrets.RELEASE_TOKEN }}
+
 
