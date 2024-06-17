@@ -42,7 +42,8 @@ jobs:
           asset_name: license-generator-linux
           asset_content_type: application/octet-stream
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+
 
 
 
