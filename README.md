@@ -2,9 +2,9 @@
 
 ### Overview
 
-This is a blazing fast ⚡, command line license generator for your open source projects written in Go.
+With the License Generator 🚀, you can streamline your workflow effortlessly. Instead of navigating through GitHub’s interface 🖥️, you simply run a command in your terminal to generate and add the license of your choice directly into your project 🛠️. 
 
-I know that GitHub has a great GUI to add licenses to projects but I always found myself doing too much work. First, you have to go to GitHub, create a file, type 'LICENSE', pick a license, push it, and then pull it locally. With this, you can just generate the license locally and push it to GitHub.
+This tool eliminates the need for tedious manual steps, allowing you to focus more on writing code and less on administrative tasks 🧑‍💻. Whether you're setting up a new repository or updating an existing one, the License Generator makes the process quick and hassle-free 🎉.
 
 ### Installation
 
