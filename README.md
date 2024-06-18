@@ -1,5 +1,10 @@
 <h1 align="center">License Generator</h1>
 
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1IT2o8A9gqdbTmH4uxqBYs5pp2-qJ0jdS" alt="License Generator Demo" style="max-width:100%;"/>
+</p>
+
 ### Overview
 
 With the License Generator 🚀, you can streamline your workflow effortlessly. Instead of navigating through GitHub’s interface 🖥️, you simply run a command in your terminal to generate and add the license of your choice directly into your project 🛠️. 
